@@ -4,11 +4,9 @@ MAINTAINER Kai Szuttor <kai@icp.uni-stuttgart.de>
 USER root
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
-        wget \
         perl \
         module-init-tools \
         libbz2-ocaml-dev \
-        git \
         g++-4.9 gcc-4.9
 
 RUN cd /usr/bin  && rm gcc g++ && ln -s gcc-4.9 gcc && ln -s g++-4.9 g++
